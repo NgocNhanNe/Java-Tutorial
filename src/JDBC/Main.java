@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws SQLException {
         Connection connection = DbConnection.getConnection();
         Statement statement = connection.createStatement();
-        String sql = "INSERT INTO student(student_id, student_name, student_age) VALUES (5,\"Ten\",15)";
+        String sql = "INSERT INTO student(student_id, student_name, student_age) VALUES (6,\"Ten\",15)";
         statement.executeUpdate(sql);
                 ResultSet rs = statement.executeQuery(sql);
 
