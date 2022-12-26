@@ -29,8 +29,22 @@ public class Manage {
                     System.out.println("remove success");
                     break;
                 case 3:
+                    System.out.println("Show document by id");
+                    System.out.println("-------------------");
+                    System.out.println("Enter id: ");
+                    String id1 = scanner.nextLine();
+                    showDocumentbyId(id1, documents);
                     break;
                 case 4:
+                    System.out.println("Search document by type");
+                    System.out.println("-------------------");
+                    System.out.println("Type document: ");
+                    System.out.println("1.Book");
+                    System.out.println("2.Magazine");
+                    System.out.println("3.Paper");
+                    System.out.println("Enter type: ");
+                    int type = Integer.parseInt(scanner.nextLine());
+                    searchDocumentByType(type,documents);
                     break;
                 case 5:
                     System.out.println("List of documents: ");
@@ -40,6 +54,41 @@ public class Manage {
                     System.exit(1);
                     break;
                 default:
+            }
+        }
+    }
+
+    public void searchDocumentByType(int type, List<Document> documents) {
+
+        switch (type) {
+            case 1 -> searchByBook();
+            case 2 -> searchByMagazine();
+            case 3 -> searchByPaper();
+            default -> System.out.println("type is invalid!");
+        }
+
+
+    }
+
+    public void searchByBook() {
+        this.documents.stream().filter(doc -> doc instanceof Book).forEach(doc ->
+                System.out.println(doc.toString()));
+    }
+
+    public void searchByMagazine() {
+        this.documents.stream().filter(doc -> doc instanceof Magazine).forEach(doc ->
+                System.out.println(doc.toString()));
+    }
+
+    public void searchByPaper() {
+        this.documents.stream().filter(doc -> doc instanceof Paper).forEach(doc ->
+                System.out.println(doc.toString()));
+    }
+
+    private void showDocumentbyId(String id, List<Document> documents) {
+        for (Document document: documents){
+            if(document.getDoc_id().contains(id)){
+                System.out.println("Document is: "+document);
             }
         }
     }
@@ -71,6 +120,9 @@ public class Manage {
         int release_number = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Choose type document: ");
+        System.out.println("1.Book");
+        System.out.println("2.Magazine");
+        System.out.println("3.Paper");
 
         int type = Integer.parseInt(scanner.nextLine());
         switch (type){
