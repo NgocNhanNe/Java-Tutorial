@@ -11,5 +11,11 @@ public class Ex3_Map {
         hashMap.put("l",1);
 
         System.out.println(hashMap);
+        for(String key: hashMap.keySet()){
+            System.out.println("key: " + key);
+        }
+        for(Integer value: hashMap.values()){
+            System.out.println("value: " + value);
+        }
     }
 }
