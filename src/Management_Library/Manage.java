@@ -35,6 +35,7 @@ public class Manage {
                     String id1 = scanner.nextLine();
                     showDocumentbyId(id1, documents);
                     break;
+
                 case 4:
                     System.out.println("Search document by type");
                     System.out.println("-------------------");
