@@ -1,4 +1,4 @@
-package Homework_OOP;
+package Management_Department;
 
 public class Worker extends Department {
     private int position;

@@ -1,4 +1,4 @@
-package Homework_OOP;
+package Management_Department;
 
 public class Engineer extends Department{
     private String training_industry;

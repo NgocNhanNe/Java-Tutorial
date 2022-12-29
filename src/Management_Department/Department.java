@@ -1,4 +1,4 @@
-package Homework_OOP;
+package Management_Department;
 
 public class Department {
     private String full_name;

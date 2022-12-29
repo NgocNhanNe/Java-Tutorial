@@ -160,7 +160,4 @@ public class Manage {
         }
     }
 
-    public void find(){
-
-    }
 }

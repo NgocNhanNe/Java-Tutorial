@@ -1,4 +1,4 @@
-package Homework_OOP;
+package Management_Department;
 
 import java.util.ArrayList;
 import java.util.List;
